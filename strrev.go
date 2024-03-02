@@ -7,4 +7,5 @@ func StrRev(s string) string {
 	for r, _ := range Astr {
 		defer z01.PrintRune(Astr[r])
 	}
+	return string('\n')
 }
