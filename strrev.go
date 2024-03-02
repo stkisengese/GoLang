@@ -2,9 +2,8 @@ package piscine
 
 func StrRev(s string) string {
 	Astr := []rune(s)
-
-	for i, j := 0, (len(Astr) - 1); i > j; i, j = i+1, j-1 {
-		Astr[i], Astr[j] = Astr[j], Astr[i]
+	for i := 0; i < len(Astr)-1; i += 2 {
+		Astr[i], Astr[i+1] = Astr[i+1], Astr[i]
 	}
 	return string(Astr)
 }
