@@ -10,13 +10,13 @@ func Sqrt(nb int) int {
 	SqrtN := nb / 2
 	for t := 1; t < 10; t++ {
 		if SqrtN != 0 {
-			SqrtN = SqrtN + (nb/SqrtN)/2
+			SqrtN = (SqrtN + nb/SqrtN) / 2
 		} else {
 			break
 		}
-		/* if SqrtN*SqrtN != nb {
+		if SqrtN*SqrtN != nb {
 			return 0
-		} */
+		}
 	}
 	return SqrtN
 }
