@@ -8,7 +8,7 @@ func Sqrt(nb int) int {
 		return 1
 	}
 	SqrtN := nb / 2
-	for t := 1; t < 10; t++ {
+	for t := 1; t < 11; t++ {
 		if SqrtN != 0 {
 			SqrtN = (SqrtN + nb/SqrtN) / 2
 		} else {
