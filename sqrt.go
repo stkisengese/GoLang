@@ -14,9 +14,9 @@ func Sqrt(nb int) int {
 		} else {
 			break
 		}
-		if SqrtN*SqrtN != nb {
+		/* if SqrtN*SqrtN != nb {
 			return 0
-		}
+		} */
 	}
 	return SqrtN
 }
