@@ -5,10 +5,8 @@ func FindNextPrime(nb int) int {
 		return 2
 	}
 	prime := nb
-	for {
-		if !IsPrime(prime) {
-			prime++
-		}
-		return prime
+	for !IsPrime(prime) {
+		prime++
 	}
+	return prime
 }
