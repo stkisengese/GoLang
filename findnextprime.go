@@ -4,9 +4,9 @@ func FindNextPrime(nb int) int {
 	if nb <= 1 {
 		return 2
 	}
-	prime := nb
-	for !IsPrime(prime) {
-		prime++
+
+	for !IsPrime(nb) {
+		nb++
 	}
-	return prime
+	return nb
 }
