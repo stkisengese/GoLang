@@ -4,11 +4,15 @@ func IsPrime(nb int) bool {
 	if nb <= 1 {
 		return false
 	}
-	for {
-		if IsPrime(nb) {
-			return true
-		} else {
+	prime := 1
+	for i := 2; i < nb; i++ {
+		if (nb % i) == 0 {
 			return false
 		}
+	}
+	if prime == 1 {
+		return true
+	} else {
+		return false
 	}
 }
