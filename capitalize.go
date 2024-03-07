@@ -19,7 +19,6 @@ func Capitalize(s string) string {
 					capital += string(r)
 				}
 			}
-
 		} else {
 			capital += string(r)
 			measure = true
