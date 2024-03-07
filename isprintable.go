@@ -5,8 +5,8 @@ func IsPrintable(s string) bool {
 		if r >= 'a' || r <= 'z' || r >= 'A' || r <= 'Z' {
 			continue
 		} else {
-			return false
+			return true
 		}
 	}
-	return true
+	return false
 }
