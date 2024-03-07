@@ -6,6 +6,3 @@ func FirstRune(s string) rune {
 	}
 	return 0
 }
-// str := []rune (s)
-// return str[len(str)-1]
-// return str[0]
