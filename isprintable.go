@@ -2,11 +2,11 @@ package piscine
 
 func IsPrintable(s string) bool {
 	for _, r := range s {
-		if r >= 'a' || r <= 'z' || r >= 'A' || r <= 'Z' {
+		if r >= 32 && r <= 126 {
 			continue
 		} else {
-			return true
+			return false
 		}
 	}
-	return false
+	return true
 }
