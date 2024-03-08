@@ -20,7 +20,7 @@ func main() {
 			}
 		case "--order", "-o":
 			if i+1 < len(args) {
-				result = (result + args[i+1])
+				result = orderString(result + args[i+1])
 				i++
 			}
 		default:
@@ -28,4 +28,15 @@ func main() {
 		}
 	}
 	fmt.Println(result)
+}
+func orderString(s string) string {
+	runes := []rune(s)
+	for i := 0; i < len(runes); i++ {
+		for j := 0; j < len(runes)-1-i; j++ {
+			if runes[j] > runes[j+1] {
+				runes[j], runes[j+1] = runes[j+1], runes[j]
+			}
+		}
+	}
+	return string(runes)
 }
