@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	args := os.Args
+	args := os.Args[1:]
 	uppercase := false
 	if len(args) > 0 && args[0] == "--upper" {
 		uppercase = true
