@@ -29,6 +29,7 @@ func main() {
 	}
 	fmt.Println(result)
 }
+
 func orderString(s string) string {
 	runes := []rune(s)
 	for i := 0; i < len(runes); i++ {
