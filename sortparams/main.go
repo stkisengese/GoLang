@@ -19,6 +19,6 @@ func main() {
 		for _, value := range Params[k] {
 			z01.PrintRune(value)
 		}
+		z01.PrintRune('\n')
 	}
-	z01.PrintRune('\n')
 }
