@@ -1,6 +1,6 @@
 package piscine
 
-func SplitWhitespaces(s string) []string {
+func SplitWhiteSpaces(s string) []string {
 	var words []string
 	start := 0
 	for i, r := range s {
