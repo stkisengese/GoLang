@@ -1,9 +1,5 @@
 package piscine
 
-func isWhiteSpace(r rune) bool {
-	return r == ' ' || r == '\t' || r == '\n'
-}
-
 func SplitWhitespaces(s string) []string {
 	var words []string
 	start := 0
@@ -19,4 +15,8 @@ func SplitWhitespaces(s string) []string {
 		}
 	}
 	return words
+}
+
+func isWhiteSpace(r rune) bool {
+	return r == ' ' || r == '\t' || r == '\n'
 }
