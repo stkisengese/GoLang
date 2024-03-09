@@ -10,9 +10,9 @@ func SplitWhiteSpaces(s string) []string {
 			}
 			start = i + 1
 		}
-		if start < len(s) {
-			words = append(words, s[start:])
-		}
+	}
+	if start < len(s) {
+		words = append(words, s[start:])
 	}
 	return words
 }
