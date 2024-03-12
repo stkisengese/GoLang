@@ -1,6 +1,6 @@
 package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
 
 func ForEach(f func(int), a []int) {
 	for _, element := range a {
@@ -9,5 +9,6 @@ func ForEach(f func(int), a []int) {
 }
 
 func PrintNbr(n int) {
-	fmt.Print(n)
+	digitRune := rune(n + '0')
+	z01.PrintRune(digitRune)
 }
