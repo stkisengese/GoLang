@@ -14,7 +14,7 @@ func FoodDeliveryTime(order string) int {
 	case "nuggets":
 		preptime = 12
 	default:
-		preptime = 37
+		preptime = 404
 	}
 	return preptime
 }
