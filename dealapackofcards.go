@@ -3,15 +3,14 @@ package piscine
 import "fmt"
 
 func DealPackOfCards(deck []int) {
-	if len(deck) != 12 {
-		return
-	}
-	cardsPerPlayer := len(deck) / 4
-	for player := 1; player <= 4; player++ {
-		start := (player - 1) * cardsPerPlayer
-		end := start + cardsPerPlayer
+	players := 4
+	cards := len(deck) / 4
+	for i := 0; i < players; i++ {
+		start := i * cards
+		end := (i + 1) * cards
+
 		playerCards := deck[start:end]
 
-		fmt.Printf("Player %d: %v\n", player, playerCards)
+		fmt.Printf("Player %d: %v\n", players, playerCards)
 	}
 }
