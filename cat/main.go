@@ -22,7 +22,7 @@ func main() {
 		for _, filename := range os.Args[1:] { // loop thro each argument(file)
 			data, err := ioutil.ReadFile(filename) // open the file
 			if err != nil {                        // print error
-				for _, r := range []rune("Error opening file " + filename + ": ") {
+				for _, r := range []rune("ERROR: open" + filename + ": no such file or directory") {
 					z01.PrintRune(r)
 				}
 				z01.PrintRune('\n')
