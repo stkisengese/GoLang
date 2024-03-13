@@ -26,7 +26,7 @@ func main() {
 					z01.PrintRune(r)
 				}
 				z01.PrintRune('\n')
-				continue
+				os.Exit(1) // exit with error code 1
 			}
 			for _, b := range data { // loop each byte in data (assuming ASCII characters)
 				z01.PrintRune(rune(b))
