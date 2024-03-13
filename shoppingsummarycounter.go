@@ -1,24 +1,18 @@
 package piscine
 
 func ShoppingSummaryCounter(str string) map[string]int {
-	summary := make(map[string]int)
-	var word string
+	receipt := make(map[string]int)
+	var bought string
 
 	for _, item := range str {
-		if isWhitespace(item) {
-			if word != "" {
-				summary[word] = summary[word] + 1
-			}
-		} else {
-			word += string(item)
+		if item == 32 {
+			receipt[bought] += 1
+			bought = ""
+		} else if item != 32 {
+			bought += string(byte(item))
 		}
 	}
-	if word != "" {
-		summary[word] = summary[word] + 1
-	}
-	return summary
-}
+	receipt[bought] += 1
 
-func isWhitespace(item rune) bool {
-	return item == ' ' || item == '\t' || item == '\r'
+	return receipt
 }
