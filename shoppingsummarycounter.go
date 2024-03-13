@@ -1,17 +1,24 @@
 package piscine
 
-import "strings"
-
 func ShoppingSummaryCounter(str string) map[string]int {
 	summary := make(map[string]int)
-	shopping := strings.Fields(str)
+	var word string
 
-	for _, item := range shopping {
-		if count, ok := summary[item]; ok {
-			summary[item] = count + 1
+	for _, item := range str {
+		if isWhitespace(item) {
+			if word != "" {
+				summary[word] = summary[word] + 1
+			}
 		} else {
-			summary[item] = 1
+			word += string(item)
 		}
 	}
+	if word != "" {
+		summary[word] = summary[word] + 1
+	}
 	return summary
+}
+
+func isWhitespace(item rune) bool {
+	return item == ' ' || item == '\t' || item == '\r'
 }
