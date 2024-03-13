@@ -11,6 +11,6 @@ func Rot14(s string) string {
                 default:
                         result += string(r)
                 }
-        }
-        return result
+       }
+       return result
 }
