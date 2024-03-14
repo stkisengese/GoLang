@@ -13,5 +13,12 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 }
 
 func isAscending(a, b int) int {
-	return a - b
+	return abs(a) - abs(b)
+}
+
+func abs(x int) int { // to handle negative values
+	if x < 0 {
+		return -x
+	}
+	return x
 }
