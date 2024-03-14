@@ -3,7 +3,7 @@ package piscine
 func LoafOfBread(str string) string {
 	result := ""
 	for i := 0; i < len(str); i++ {
-		if i+5 > len(str) {
+		if i+1 > len(str) {
 			return ""
 		}
 		word := ""
