@@ -9,11 +9,10 @@ func LoafOfBread(str string) string {
 		}
 		substring := ""
 		for j := 0; j < 5; j++ {
-			if str[i+j] != ' ' {
-				substring += string(str[i+j])
-			} else {
-				j--
+			if str[i+j] == ' ' {
+				continue
 			}
+			substring += string(str[i+j])
 		}
 		result += substring + "\n"
 		i += 6
