@@ -2,20 +2,21 @@ package piscine
 
 func LoafOfBread(str string) string {
 	result := ""
-	i := 0
-	for i < len(str) {
+	for i := 0; i < len(str); i++ {
 		if i+5 > len(str) {
-			return "Invalid Output\n"
+			return ""
 		}
-		substring := ""
-		for j := 0; j < 5; j++ {
-			if str[i+j] == ' ' {
-				continue
+		word := ""
+		for j := 0; j < 5 && i+j < len(str); j++ {
+			if str[i+j] != ' ' {
+				word += string(str[i+j])
 			}
-			substring += string(str[i+j])
 		}
-		result += substring + "\n"
-		i += 6
+		if word != "" || i+len(word) == len(str) {
+			result += word + "\n"
+		}
+		i += len(word)
+
 	}
 	if len(result) > 0 && result[len(result)-1] == '\n' {
 		result = result[:len(result)-1] // slice to remove the last character
