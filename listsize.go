@@ -5,7 +5,7 @@ func ListSize(l *List) int {
   		newHead := l.Head
   		for newHead != nil {
     		    size++
-   			newHead = newHead.Next 
+    			newHead = newHead.Next 
   		}
   		return size
 }
