@@ -6,8 +6,14 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.FoodDeliveryTime("burger"))
-	fmt.Println(piscine.FoodDeliveryTime("chips"))
-	fmt.Println(piscine.FoodDeliveryTime("nuggets"))
-	fmt.Println(piscine.FoodDeliveryTime("burger") + piscine.FoodDeliveryTime("chips") + piscine.FoodDeliveryTime("nuggets"))
+	link := &piscine.List{}
+	link2 := &piscine.List{}
+
+	piscine.ListPushBack(link, "three")
+	piscine.ListPushBack(link, 3)
+	piscine.ListPushBack(link, "1")
+
+	fmt.Println(piscine.ListLast(link))
+	fmt.Println(piscine.ListLast(link2))
+
 }
