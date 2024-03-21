@@ -10,6 +10,7 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 		for i := 0; i < levelSize; i++ {
 			currentNode := queue[0]
 			queue = queue[1:]
+			f(currentNode.Data)
 			if currentNode.Left != nil {
 				queue = append(queue, currentNode.Left)
 			}
