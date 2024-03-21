@@ -18,6 +18,7 @@ func BTreeLevelCount(root *TreeNode) int {
 				queue = append(queue, node.Right)
 			}
 		}
+		queue = queue[len(queue):]
 	}
 	return level
 }
