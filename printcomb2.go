@@ -22,9 +22,7 @@ func PrintComb2() {
 						z01.PrintRune(d)
 						z01.PrintRune(44)
 						z01.PrintRune(32)
-
 					}
-
 				}
 			}
 		}
