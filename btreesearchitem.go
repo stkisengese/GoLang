@@ -1,15 +1,14 @@
 package piscine
 
 func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
-	if root == nil {
-		return nil
-	}
-	switch root != nil {
-	case elem == root.Data:
+	//	if root == nil {
+	//		return nil
+	//	}
+	if elem == root.Data {
 		return root
-	case elem < root.Data:
+	} else if elem < root.Data {
 		return BTreeSearchItem(root.Left, elem)
-	default:
+	} else {
 		return BTreeSearchItem(root.Right, elem)
 	}
 }
