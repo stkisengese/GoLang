@@ -6,10 +6,11 @@ func BTreeLevelCount(root *TreeNode) int {
 	}
 	queue := []*TreeNode{root} // Queue to store nodes for level-order traversal
 	level := 0                 // Current level counter
-	for queue != nil {
+	for len(queue) > 0 {
 		level++
 		for i := 0; i < len(queue); i++ {
-			node := queue[i]
+			node := queue[0]
+			queue = queue[1:]
 			if node.Left != nil {
 				queue = append(queue, node.Left)
 			}
